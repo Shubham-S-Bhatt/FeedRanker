@@ -1,9 +1,17 @@
-[![Build Status](https://github.com/your-org/feedranker/actions/workflows/ci.yml/badge.svg)](https://github.com/your-org/feedranker/actions/workflows/ci.yml)
-[![Coverage Status](https://coveralls.io/repos/github/your-org/feedranker/badge.svg?branch=main)](https://coveralls.io/github/your-org/feedranker?branch=main)
-[![Docker Pulls](https://img.shields.io/docker/pulls/your-org/feedranker.svg)](https://hub.docker.com/r/your-org/feedranker)
+<!-- Build & Test -->
+[![Build Status](https://github.com/<ORG>/<REPO>/actions/workflows/ci.yml/badge.svg)](https://github.com/<ORG>/<REPO>/actions/workflows/ci.yml)
+[![Coverage](https://img.shields.io/codecov/c/github/<ORG>/<REPO>.svg?branch=main)](https://codecov.io/gh/<ORG>/<REPO>)
+
+<!-- Container -->
+[![Docker Pulls](https://img.shields.io/docker/pulls/<DOCKER_USER_ORG>/<IMAGE_NAME>.svg)](https://hub.docker.com/r/<DOCKER_USER_ORG>/<IMAGE_NAME>)
+
+<!-- Community -->
+[![GitHub Stars](https://img.shields.io/github/stars/<ORG>/<REPO>?style=social)](https://github.com/<ORG>/<REPO>/stargazers)
+[![Issues](https://img.shields.io/github/issues/<ORG>/<REPO>.svg)](https://github.com/<ORG>/<REPO>/issues)
+
+<!-- License -->
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![GitHub Stars](https://img.shields.io/github/stars/your-org/feedranker.svg?style=social&label=Stars)](https://github.com/your-org/feedranker/stargazers)
-[![Issues](https://img.shields.io/github/issues/your-org/feedranker.svg)](https://github.com/your-org/feedranker/issues)
+
 
 
 
