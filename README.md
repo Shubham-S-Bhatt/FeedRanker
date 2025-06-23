@@ -1,16 +1,44 @@
-<!-- Build & Test -->
-[![Build Status](https://github.com/<ORG>/<REPO>/actions/workflows/ci.yml/badge.svg)](https://github.com/<ORG>/<REPO>/actions/workflows/ci.yml)
-[![Coverage](https://img.shields.io/codecov/c/github/<ORG>/<REPO>.svg?branch=main)](https://codecov.io/gh/<ORG>/<REPO>)
+<!-- ─────────────── BADGE BAR ─────────────── -->
+<p align="center">
 
-<!-- Container -->
-[![Docker Pulls](https://img.shields.io/docker/pulls/<DOCKER_USER_ORG>/<IMAGE_NAME>.svg)](https://hub.docker.com/r/<DOCKER_USER_ORG>/<IMAGE_NAME>)
+  <!-- Build & Test -->
+  <a href="https://github.com/ORG_NAME/REPO_NAME/actions/workflows/ci.yml">
+    <img alt="CI" src="https://github.com/ORG_NAME/REPO_NAME/actions/workflows/ci.yml/badge.svg">
+  </a>
 
-<!-- Community -->
-[![GitHub Stars](https://img.shields.io/github/stars/<ORG>/<REPO>?style=social)](https://github.com/<ORG>/<REPO>/stargazers)
-[![Issues](https://img.shields.io/github/issues/<ORG>/<REPO>.svg)](https://github.com/<ORG>/<REPO>/issues)
+  <!-- Code Coverage -->
+  <a href="https://codecov.io/gh/ORG_NAME/REPO_NAME">
+    <img alt="Coverage" src="https://img.shields.io/codecov/c/github/ORG_NAME/REPO_NAME?logo=codecov">
+  </a>
 
-<!-- License -->
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+  <!-- Latest Release -->
+  <a href="https://github.com/ORG_NAME/REPO_NAME/releases">
+    <img alt="Latest Release" src="https://img.shields.io/github/v/release/ORG_NAME/REPO_NAME?include_prereleases&logo=github">
+  </a>
+
+  <!-- Docker Pulls -->
+  <a href="https://hub.docker.com/r/DOCKER_USER/IMAGE_NAME">
+    <img alt="Docker Pulls" src="https://img.shields.io/docker/pulls/DOCKER_USER/IMAGE_NAME?logo=docker">
+  </a>
+
+  <!-- Stars -->
+  <a href="https://github.com/ORG_NAME/REPO_NAME/stargazers">
+    <img alt="GitHub Stars" src="https://img.shields.io/github/stars/ORG_NAME/REPO_NAME?style=social">
+  </a>
+
+  <!-- Issues -->
+  <a href="https://github.com/ORG_NAME/REPO_NAME/issues">
+    <img alt="Open Issues" src="https://img.shields.io/github/issues/ORG_NAME/REPO_NAME">
+  </a>
+
+  <!-- License -->
+  <a href="LICENSE">
+    <img alt="MIT License" src="https://img.shields.io/badge/License-MIT-blue.svg">
+  </a>
+
+</p>
+<!-- ───────────────────────────────────────── -->
+
 
 
 
