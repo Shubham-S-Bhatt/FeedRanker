@@ -1,6 +1,11 @@
-[![CI](https://github.com/your-org/feedranker/actions/workflows/ci.yml/badge.svg)](https://github.com/your-org/feedranker/actions/workflows/ci.yml)
+[![Build Status](https://github.com/your-org/feedranker/actions/workflows/ci.yml/badge.svg)](https://github.com/your-org/feedranker/actions/workflows/ci.yml)
+[![Coverage Status](https://coveralls.io/repos/github/your-org/feedranker/badge.svg?branch=main)](https://coveralls.io/github/your-org/feedranker?branch=main)
+[![Docker Pulls](https://img.shields.io/docker/pulls/your-org/feedranker.svg)](https://hub.docker.com/r/your-org/feedranker)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Docker Pulls](https://img.shields.io/docker/pulls/your-org/feedranker)](https://hub.docker.com/r/your-org/feedranker)
+[![GitHub Stars](https://img.shields.io/github/stars/your-org/feedranker.svg?style=social&label=Stars)](https://github.com/your-org/feedranker/stargazers)
+[![Issues](https://img.shields.io/github/issues/your-org/feedranker.svg)](https://github.com/your-org/feedranker/issues)
+
+
 
 # FeedRanker
 
@@ -32,26 +37,26 @@ Scalable feed-ranking system combining LightGBM LambdaMART and a TensorFlow deep
 ## 🏗️ Architecture
 
 ```plaintext
-┌──────────────────┐
+┌────────────────────┐
 │  Event Logs (JSON) │
-└────────┬─────────┘
+└────────┬───────────┘
          │
          ▼
-┌──────────────────┐
+┌───────────────────────┐
 │ data_preprocessing.py │
-└────────┬─────────┘
+└────────┬──────────────┘
          │ Parquet
          ▼
-┌────────┴─────────┐       ┌───────────────┐
-│ train_lambdamart.py ───▶│ LightGBM Model │
-└────────┬─────────┘       └───────────────┘
+┌────────┴────────────┐        ┌────────────────┐
+│ train_lambdamart.py | ────▶ │ LightGBM Model │
+└────────┬────────────┘        └────────────────┘
          │
          │
-         │        ┌───────────────┐
+         │        ┌────────────────┐
          ▼        │ TensorFlow CTR │
-┌───────┴────────┐ │     Model      │
-│ train_ctr.py    │ └───────────────┘
-└────────┬────────┘
+┌────────┴─────┐  │     Model      │
+│ train_ctr.py |  └────────────────┘
+└────────┬─────┘
          │
          ▼
 ┌──────────────────┐
@@ -64,9 +69,9 @@ Scalable feed-ranking system combining LightGBM LambdaMART and a TensorFlow deep
 └──────────────────┘
          │
          ▼
-┌──────────────────┐
+┌───────────────────┐
 │  Docker Container │
-└──────────────────┘
+└───────────────────┘
 ```
 
 ---
@@ -177,7 +182,7 @@ This project is licensed under the **MIT License** – see the [LICENSE](LICENSE
 ## 📬 Contact & Citation
 
 - **Author:** Shubham Bhatt  
-- **Email:** your.email@domain.com  
+- **Email:** shubhamsatyaprakashbhatt@gmail.com  
 - **Citation:**  
   ```bibtex
   @misc{feedranker2025,
