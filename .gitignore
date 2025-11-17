@@ -84,10 +84,15 @@ postgres_data/
 # TensorFlow cache
 .tensorflow/
 
-
+# Documentation and deployment files (keep locally)
 COMPLETION_CHECKLIST.md
 FILES_CREATED.md
 IMPLEMENTATION_SUMMARY.md
-# QUICK_REFERENCE.md
+QUICK_REFERENCE.md
 QUICK_START.md
 START_HERE.md
+ARCHITECTURE.md
+WEB_APP_SETUP.md
+DEPLOYMENT_HOSTINGER.md
+deploy.sh
+update.sh
