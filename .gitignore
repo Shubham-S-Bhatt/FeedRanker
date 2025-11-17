@@ -2,6 +2,7 @@ dataset/
 .venv/
 venv/
 env/
+.github
 
 # Python
 __pycache__/
