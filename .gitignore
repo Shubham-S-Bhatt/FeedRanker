@@ -22,36 +22,33 @@ coverage.xml
 .hypothesis/
 .pytest_cache/
 
-# ML Models (Large files)
-*.txt
+# ML Models (Large files - ONLY these, not the training files!)
+# Keep train scripts but ignore the output model files
 deepctr_model/
-lambdamart.txt
 models/
 *.joblib
 *.pkl
-*.h5
 
-# Data
-*.parquet
-*.csv
+# Data files (keep training scripts, ignore data)
 behaviors.tsv
 news.tsv
 output/
+*.parquet
+features.parquet
 
-# Node.js
+# Node.js node_modules only (keep package.json and package-lock.json for reproducibility)
 node_modules/
-dist/
-build/
-.next/
-npm-debug.log
-yarn-error.log
-package-lock.json
-yarn.lock
-
-# Frontend
 frontend/dist
 frontend/build
+
+# Dev artifacts
+*.log
+npm-debug.log
+yarn-error.log
+
+# Frontend
 frontend/.env.local
+.next/
 
 # Backend
 backend/__pycache__/
@@ -69,24 +66,20 @@ feed_ranker_pb2_grpc.py
 *.swp
 *.swo
 *~
-.DS_Store
 
 # OS
+.DS_Store
+Thumbs.db
+
+# Environment files (but keep .env.example)
 .env
 .env.local
 .env.*.local
-.DS_Store
-Thumbs.db
 
 # Database
 *.db
 *.sqlite3
 postgres_data/
 
-# Logs
-logs/
-*.log
-
-# TensorFlow
+# TensorFlow cache
 .tensorflow/
-__pycache__/
