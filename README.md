@@ -219,25 +219,37 @@ CORS_ORIGINS=http://localhost:3000,https://yourdomain.com
 
 ---
 
-## 🚢 Production Deployment
+## 🚀 Production Deployment
 
 ### Using Docker Compose
 ```bash
 docker-compose -f docker-compose.yml up -d
 ```
 
+### Using Nginx + Gunicorn on VPS
+Complete guide for deploying on Hostinger VPS or any Ubuntu server:
+
+👉 **[VPS Deployment Guide](DEPLOYMENT_HOSTINGER.md)** - Step-by-step instructions with:
+- Nginx reverse proxy setup
+- Gunicorn WSGI server configuration
+- PostgreSQL database setup
+- SSL/TLS certificate installation
+- Systemd service management
+- Monitoring and maintenance
+- Security best practices
+
+**Quick deploy (automated):**
+```bash
+# On your VPS
+curl -O https://raw.githubusercontent.com/Shubham-S-Bhatt/FeedRanker/main/deploy.sh
+chmod +x deploy.sh
+sudo bash deploy.sh yourdomain.com
+```
+
 ### Using Kubernetes (Future)
 - Helm charts coming soon
 - Horizontal scaling support
 - Auto-scaling based on latency
-
-### Monitoring with Prometheus
-```yaml
-scrape_configs:
-  - job_name: 'feedranker'
-    static_configs:
-      - targets: ['localhost:8000']
-```
 
 ---
 
