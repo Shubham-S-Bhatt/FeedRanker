@@ -1,0 +1,78 @@
+version: '3.8'
+
+services:
+  # PostgreSQL Database
+  postgres:
+    image: postgres:15-alpine
+    container_name: feedranker-db
+    environment:
+      POSTGRES_USER: feedranker
+      POSTGRES_PASSWORD: feedranker
+      POSTGRES_DB: feedranker
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U feedranker"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # gRPC Ranking Server
+  grpc-server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: feedranker-grpc
+    environment:
+      PYTHONUNBUFFERED: "1"
+    ports:
+      - "50051:50051"
+    volumes:
+      - ./models:/app/models
+    command: python grpc_server.py
+    depends_on:
+      - postgres
+
+  # FastAPI Backend
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: feedranker-api
+    environment:
+      API_HOST: "0.0.0.0"
+      API_PORT: "8000"
+      DEBUG: "false"
+      GRPC_HOST: "grpc-server:50051"
+      DATABASE_URL: "postgresql://feedranker:feedranker@postgres:5432/feedranker"
+      CORS_ORIGINS: "http://localhost:3000,http://localhost:8000,http://localhost"
+    ports:
+      - "8000:8000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      grpc-server:
+        condition: service_started
+    command: uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+
+  # React Frontend
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: feedranker-web
+    environment:
+      VITE_API_URL: "http://localhost:8000"
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+
+volumes:
+  postgres_data:
+
+networks:
+  default:
+    name: feedranker-network

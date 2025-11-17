@@ -1,2 +1,91 @@
 dataset/
 .venv/
+venv/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# ML Models (Large files)
+*.txt
+deepctr_model/
+lambdamart.txt
+models/
+*.joblib
+*.pkl
+*.h5
+
+# Data
+*.parquet
+*.csv
+behaviors.tsv
+news.tsv
+output/
+
+# Node.js
+node_modules/
+dist/
+build/
+.next/
+npm-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# Frontend
+frontend/dist
+frontend/build
+frontend/.env.local
+
+# Backend
+backend/__pycache__/
+backend/.env
+backend/feed_ranker_pb2.py
+backend/feed_ranker_pb2_grpc.py
+
+# gRPC generated files (root)
+feed_ranker_pb2.py
+feed_ranker_pb2_grpc.py
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# OS
+.env
+.env.local
+.env.*.local
+.DS_Store
+Thumbs.db
+
+# Database
+*.db
+*.sqlite3
+postgres_data/
+
+# Logs
+logs/
+*.log
+
+# TensorFlow
+.tensorflow/
+__pycache__/
