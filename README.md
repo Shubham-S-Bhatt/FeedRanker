@@ -244,8 +244,6 @@ scrape_configs:
 ## 📖 Documentation
 
 - **[Web App Setup Guide](WEB_APP_SETUP.md)** - Detailed deployment instructions
-- **[AI Agent Guide](.github/copilot-instructions.md)** - For developers using AI coding assistants
-- **[API Documentation](http://localhost:8000/docs)** - Swagger UI (after starting)
 
 ---
 
